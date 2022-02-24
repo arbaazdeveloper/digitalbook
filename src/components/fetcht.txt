@@ -1,0 +1,13 @@
+async function postData(url = '', data = {}) {
+  
+  const response = await fetch(url, {
+    method: 'POST' 
+    headers: {
+      'Content-Type': 'application/json'
+      'auth-token': eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjE2Y2FiMzhjNDFjMzQ3OTFiNWM4MDM5In0sImlhdCI6MTYzNDU4MzA2MX0.jjrFMAXUQnFxFrXxfLVRGMbj1CbqULMwlFb-YIwooXY
+    },
+   
+    body: JSON.stringify({title,description,tag}) 
+  });
+  return response.json(); // parses JSON response into native JavaScript objects
+}
